@@ -12,9 +12,11 @@ import {
   Navigate,
 } from "react-router-dom";
 
+
+
 function App() {
   const { user } = useContext(AuthContext);
-
+  
   console.log(user);
   return (
     <Router>

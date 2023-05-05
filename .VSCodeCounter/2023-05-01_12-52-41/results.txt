@@ -1,0 +1,90 @@
+Date : 2023-05-01 12:52:41
+Directory : c:\Users\smm\Desktop\mern social\react-social
+Total : 39 files,  18521 codes, 32 comments, 149 blanks, all 18702 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| JSON           |          2 |     16,990 |          0 |          2 |     16,992 |
+| JavaScript JSX |         12 |        593 |         24 |         59 |        676 |
+| CSS            |         13 |        588 |          7 |         29 |        624 |
+| JavaScript     |          9 |        292 |          1 |         22 |        315 |
+| Markdown       |          1 |         38 |          0 |         33 |         71 |
+| HTML           |          1 |         19 |          0 |          4 |         23 |
+| Properties     |          1 |          1 |          0 |          0 |          1 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                         | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                            |         39 |     18,521 |         32 |        149 |     18,702 |
+| . (Files)                                                                                                    |          4 |     17,029 |          0 |         35 |     17,064 |
+| public                                                                                                       |          2 |         23 |          0 |          4 |         27 |
+| public (Files)                                                                                               |          1 |         19 |          0 |          4 |         23 |
+| public\assets                                                                                                |          1 |          4 |          0 |          0 |          4 |
+| src                                                                                                          |         33 |      1,469 |         32 |        110 |      1,611 |
+| src (Files)                                                                                                  |          4 |        190 |          0 |         13 |        203 |
+| src\components                                                                                               |         16 |        800 |         10 |         41 |        851 |
+| src\components\closeFriend                                                                                   |          2 |         23 |          0 |          2 |         25 |
+| src\components\feed                                                                                          |          2 |         38 |          1 |          4 |         43 |
+| src\components\online                                                                                        |          2 |         43 |          0 |          3 |         46 |
+| src\components\post                                                                                          |          2 |        148 |          1 |          8 |        157 |
+| src\components\rightbar                                                                                      |          2 |        150 |          0 |          8 |        158 |
+| src\components\share                                                                                         |          2 |        143 |          8 |          5 |        156 |
+| src\components\sidebar                                                                                       |          2 |        110 |          0 |          4 |        114 |
+| src\components\topbar                                                                                        |          2 |        145 |          0 |          7 |        152 |
+| src\context                                                                                                  |          3 |         67 |          1 |          5 |         73 |
+| src\pages                                                                                                    |         10 |        412 |         21 |         51 |        484 |
+| src\pages\home                                                                                               |          2 |         22 |          0 |          3 |         25 |
+| src\pages\login                                                                                              |          2 |        140 |         21 |         19 |        180 |
+| src\pages\profile                                                                                            |          2 |         87 |          0 |          8 |         95 |
+| src\pages\register                                                                                           |          4 |        163 |          0 |         21 |        184 |
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                                     | language       | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Users\smm\Desktop\mern social\react-social\.env                                                           | Properties     |          1 |          0 |          0 |          1 |
+| c:\Users\smm\Desktop\mern social\react-social\README.md                                                      | Markdown       |         38 |          0 |         33 |         71 |
+| c:\Users\smm\Desktop\mern social\react-social\package-lock.json                                              | JSON           |     16,945 |          0 |          1 |     16,946 |
+| c:\Users\smm\Desktop\mern social\react-social\package.json                                                   | JSON           |         45 |          0 |          1 |         46 |
+| c:\Users\smm\Desktop\mern social\react-social\public\assets\style.css                                        | CSS            |          4 |          0 |          0 |          4 |
+| c:\Users\smm\Desktop\mern social\react-social\public\index.html                                              | HTML           |         19 |          0 |          4 |         23 |
+| c:\Users\smm\Desktop\mern social\react-social\src\App.js                                                     | JavaScript     |         30 |          0 |          8 |         38 |
+| c:\Users\smm\Desktop\mern social\react-social\src\apiCalls.js                                                | JavaScript     |         10 |          0 |          1 |         11 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\closeFriend\CloseFriend.jsx                     | JavaScript JSX |         11 |          0 |          2 |         13 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\closeFriend\closeFriend.css                     | CSS            |         12 |          0 |          0 |         12 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\feed\Feed.jsx                                   | JavaScript JSX |         32 |          1 |          4 |         37 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\feed\feed.css                                   | CSS            |          6 |          0 |          0 |          6 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\online\Online.jsx                               | JavaScript JSX |         15 |          0 |          3 |         18 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\online\online.css                               | CSS            |         28 |          0 |          0 |         28 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\post\Post.jsx                                   | JavaScript JSX |         83 |          1 |          8 |         92 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\post\post.css                                   | CSS            |         65 |          0 |          0 |         65 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\rightbar\Rightbar.jsx                           | JavaScript JSX |         81 |          0 |          6 |         87 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\rightbar\rightbar.css                           | CSS            |         69 |          0 |          2 |         71 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\share\Share.jsx                                 | JavaScript JSX |         79 |          7 |          5 |         91 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\share\share.css                                 | CSS            |         64 |          1 |          0 |         65 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\sidebar\Sidebar.jsx                             | JavaScript JSX |         66 |          0 |          3 |         69 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\sidebar\sidebar.css                             | CSS            |         44 |          0 |          1 |         45 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\topbar\Topbar.jsx                               | JavaScript JSX |         62 |          0 |          3 |         65 |
+| c:\Users\smm\Desktop\mern social\react-social\src\components\topbar\topbar.css                               | CSS            |         83 |          0 |          4 |         87 |
+| c:\Users\smm\Desktop\mern social\react-social\src\context\AuthActions.js                                     | JavaScript     |         10 |          1 |          1 |         12 |
+| c:\Users\smm\Desktop\mern social\react-social\src\context\AuthContext.js                                     | JavaScript     |         32 |          0 |          4 |         36 |
+| c:\Users\smm\Desktop\mern social\react-social\src\context\AuthReducer.js                                     | JavaScript     |         25 |          0 |          0 |         25 |
+| c:\Users\smm\Desktop\mern social\react-social\src\dummyData.js                                               | JavaScript     |        138 |          0 |          2 |        140 |
+| c:\Users\smm\Desktop\mern social\react-social\src\index.js                                                   | JavaScript     |         12 |          0 |          2 |         14 |
+| c:\Users\smm\Desktop\mern social\react-social\src\pages\home\Home.jsx                                        | JavaScript JSX |         18 |          0 |          3 |         21 |
+| c:\Users\smm\Desktop\mern social\react-social\src\pages\home\home.css                                        | CSS            |          4 |          0 |          0 |          4 |
+| c:\Users\smm\Desktop\mern social\react-social\src\pages\login\Login.jsx                                      | JavaScript JSX |         48 |         15 |          7 |         70 |
+| c:\Users\smm\Desktop\mern social\react-social\src\pages\login\login.css                                      | CSS            |         92 |          6 |         12 |        110 |
+| c:\Users\smm\Desktop\mern social\react-social\src\pages\profile\Profile.jsx                                  | JavaScript JSX |         45 |          0 |          8 |         53 |
+| c:\Users\smm\Desktop\mern social\react-social\src\pages\profile\profile.css                                  | CSS            |         42 |          0 |          0 |         42 |
+| c:\Users\smm\Desktop\mern social\react-social\src\pages\register\Register.jsx                                | JavaScript JSX |         53 |          0 |          7 |         60 |
+| c:\Users\smm\Desktop\mern social\react-social\src\pages\register\This is a special code that helps make d.js | JavaScript     |          7 |          0 |          1 |          8 |
+| c:\Users\smm\Desktop\mern social\react-social\src\pages\register\Untitled-1.js                               | JavaScript     |         28 |          0 |          3 |         31 |
+| c:\Users\smm\Desktop\mern social\react-social\src\pages\register\register.css                                | CSS            |         75 |          0 |         10 |         85 |
+| Total                                                                                                        |                |     18,521 |         32 |        149 |     18,702 |
++--------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
