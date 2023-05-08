@@ -9,12 +9,17 @@ const PostSchema = new mongoose.Schema(
       type: String,
       max: 500,
     },
-    img: {
-      type: String,
-    },
+    
     likes: {
       type: Array,
       default: [],
+    },
+    publicId: {
+      type: String,
+    },
+    imageUrl: {
+      type: String,
+      required: false,
     },
   },
   // when ever we create user or update this its going to automatically update our time stamp

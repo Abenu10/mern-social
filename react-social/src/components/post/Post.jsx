@@ -44,9 +44,11 @@ function Post({ post }) {
             <Link to={`profile/${user.username}`}>
               <img
                 src={
+                  
                   user.profilePicture
                     ? PF + user.profilePicture
                     : PF + "person/noAvatar.png"
+
                 }
                 alt=""
                 className="postProfileImg"
@@ -61,7 +63,12 @@ function Post({ post }) {
         </div>
         <div className="postCenter">
           <span className="postText">{post?.desc}</span>
-          <img src={PF + post.img} alt="" className="postImg" />
+          <img src={
+            // TODO: 
+            post.imageUrl
+            // PF + post.img
+            
+            } alt="" className="postImg" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">

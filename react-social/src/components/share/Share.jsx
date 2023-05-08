@@ -9,41 +9,66 @@ import { useState } from "react";
 import axios from "axios";
 // import useeffect from react
 import { useEffect } from "react";
+import { unstable_createMuiStrictModeTheme } from "@mui/material";
 
 function Share() {
   const { user } = useContext(AuthContext);
-  console.log(user.username); // TODO FIX THIS
+  console.log(user.username); // TODO we are using default user make it the logged in user
 
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const desc = useRef();
   const [file, setFile] = useState(null);
 
+  // TODO:
+  // const submitHandler = async (e) => {
+  //   e.preventDefault();
+  //   const newPost = {
+  //     userId: user._id,
+  //     desc: desc.current.value,
+  //   };
+  //   console.log(user._id);
+
+  //   const config = {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   };
+  //   try {
+  //     const res = await axios.post(
+  //       "/posts/6441799b9b922c5569b13b85",
+  //       newPost,
+  //       config
+  //     );
+  //     // you can create a post context and update your post state also
+  //     console.log(res.data); // log the created post to the console
+  //     window.location.reload();
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+  // TODO:
   const submitHandler = async (e) => {
     e.preventDefault();
-    const newPost = {
-      userId: user._id,
-      desc: desc.current.value,
-    };
-    //
-    if (file) {
-      const data = new FormData();
-      const fileName = Date.now() + file.name;
-      data.append("file", file);
-      data.append("name", fileName);
-      // TODO:  here instead of "filename" we will use image url of cloudinary
-      newPost.img = fileName;
-      console.log(file);
-      try {
-        await axios.post("/upload", data);
-        // you can create a post context and update your post state also
+
+    const formData = new FormData();
+    formData.append("desc", desc.current.value);
+    formData.append("postImage", file);
+
+    axios
+      .post(`/posts/${user._id}`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((response) => {
+        // handle success
+        console.log(response.data);
         window.location.reload();
-      } catch (err) {
-        console.log(err);
-      }
-    }
-    try {
-      await axios.post("/posts", newPost);
-    } catch (err) {}
+      })
+      .catch((error) => {
+        // handle error
+        console.log(error);
+      });
   };
   return (
     <div className="share">

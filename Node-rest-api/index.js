@@ -22,7 +22,7 @@ app.use(cors());
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
-
+const { uploadToCloudinary, removeFromCloudinary } = require("./services/cloudinary");
 const multer = require("multer");
 
 const path = require("path");
@@ -42,27 +42,28 @@ app.use(helmet());
 app.use(morgan("common"));
 
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "public/images");
-  },
-  filename: (req, file, cb) => {
-    // cb(null, file.originalname);
-    // cb(null, req.body.name);
-    // console.log(req.body);
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
-    cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
+//   destination: (req, file, cb) => {
+//     cb(null, "public/images");
+//   },
+//   filename: (req, file, cb) => {
+//     // cb(null, file.originalname);
+//     // cb(null, req.body.name);
+//     // console.log(req.body);
+//     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
+//     cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
  
-  },
-});
+//   },
 
-const upload = multer({ storage: storage });
-app.post("/api/upload", upload.single("file"), (req, res) => {
-  try {
-    return res.status(200).json("File uploded successfully");
-  } catch (error) {
-    console.error(error);
-  }
 });
+// ? upload middleware 
+const upload = multer({ storage: storage });
+// app.post("/api/upload", upload.single("file"), (req, res) => {
+//   try {
+//     return res.status(200).json("File uploded successfully");
+//   } catch (error) {
+//     console.error(error);
+//   }
+// });
 
 
 app.use("/api/users", userRoute);
