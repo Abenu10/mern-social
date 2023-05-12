@@ -22,9 +22,8 @@ app.use(cors());
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
-const { uploadToCloudinary, removeFromCloudinary } = require("./services/cloudinary");
-const multer = require("multer");
 
+// used for the local default images
 const path = require("path");
 
 //configure dotenv to access environment variables from .env file
@@ -41,22 +40,11 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 
-const storage = multer.diskStorage({
-//   destination: (req, file, cb) => {
-//     cb(null, "public/images");
-//   },
-//   filename: (req, file, cb) => {
-//     // cb(null, file.originalname);
-//     // cb(null, req.body.name);
-//     // console.log(req.body);
-//     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
-//     cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
- 
-//   },
 
-});
-// ? upload middleware 
-const upload = multer({ storage: storage });
+
+// });
+// ? upload middleware
+// const upload = multer({ storage: storage });
 // app.post("/api/upload", upload.single("file"), (req, res) => {
 //   try {
 //     return res.status(200).json("File uploded successfully");
@@ -64,7 +52,6 @@ const upload = multer({ storage: storage });
 //     console.error(error);
 //   }
 // });
-
 
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
@@ -76,11 +63,6 @@ app.get("/", (req, res) => {
 app.get("/users", (req, res) => {
   res.send("Welcome to Users page");
 });
-// app.get("/posts" ,(req,res)=>{
-//     res.json({
-//         message:"hello"
-//     })
-// })
 
 //listen to port 8800 and log a message when the server is running
 app.listen(8800, () => {

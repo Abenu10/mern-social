@@ -56,7 +56,7 @@ function Post({ post }) {
             </Link>
             <span className="postUsername">{user.username}</span>
             <span className="postDate">{format(post.createdAt)}</span>
-          </div>
+        </div>
           <div className="postTopRight">
             <MoreVertIcon />
           </div>

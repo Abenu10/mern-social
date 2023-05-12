@@ -12,17 +12,24 @@ import {
   Navigate,
 } from "react-router-dom";
 
-
- 
 function App() {
   const { user } = useContext(AuthContext);
-  
+
   console.log(user);
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={
+        
+        Object.keys(user).length === 0 ? (
+          <Login />
+        ) : (
+          <Navigate to="/" />
+        )
+        // <Home />
+        } /> */}
         <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
+        <Route path="/" element={user ? <Home/> : <Login />} />
 
         <Route
           path="/register"
