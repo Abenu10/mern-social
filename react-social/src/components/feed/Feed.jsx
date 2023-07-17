@@ -20,7 +20,8 @@ function Feed({ username }) {
     const fetchPosts = async () => {
       const res = username
         ? await api.get("/posts/profile/" + username)
-        : await api.get("/posts/timeline/" + user._id);
+        : await api.get("/posts");
+      // : await api.get("/posts/timeline/" + user._id);
       // sort the array of posts by date
       setPosts(
         res.data.sort((p1, p2) => {
