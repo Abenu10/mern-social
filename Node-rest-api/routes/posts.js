@@ -150,4 +150,14 @@ router.get("/profile/:username", async (req, res) => {
   }
 });
 
+//   TODO:  get all posts
+router.get("/", async (req, res) => {
+  try {
+    const posts = await Post.find();
+    res.status(200).json(posts);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

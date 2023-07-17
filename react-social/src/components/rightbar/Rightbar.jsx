@@ -61,10 +61,10 @@ function Rightbar({ user }) {
         <div className="birthdayContainer">
           <img src="assets/gift.png" className="birthdayImg" />
           <span className="birthdayText">
-            <b>Pola Foster</b> and <b>3 other friends</b> have a birthday today.
+            <b>Abebe Bekele</b> and <b>3 other friends</b> have a birthday today.
           </span>
         </div>
-        <img src="assets/ad.png" className="rightbarAd" />
+        <img src="assets/ad2.jpg" className="rightbarAd" />
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
           {Users.map((u) => (
