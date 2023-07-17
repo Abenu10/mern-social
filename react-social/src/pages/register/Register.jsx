@@ -15,11 +15,28 @@ function Register() {
   const passwordAgain = useRef();
   const navigate = useNavigate();
 
+  // const handleClick = async (e) => {
+  //   e.preventDefault();
+  //   if (passwordAgain.current.value !== password.current.value) {
+  //     passwordAgain.current.setCustomValidity("Passwords don't match");
+  //   } else {
+  //     const user = {
+  //       username: username.current.value,
+  //       email: email.current.value,
+  //       password: password.current.value,
+  //     };
+  //     try {
+  //       await api.post("/auth/register", user);
+  //       navigate("/login");
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   }
+  // };
+
   const handleClick = async (e) => {
     e.preventDefault();
-    if (passwordAgain.current.value !== password.current.value) {
-      passwordAgain.current.setCustomValidity("Passwords don't match");
-    } else {
+    if (passwordAgain.current.value === password.current.value) {
       const user = {
         username: username.current.value,
         email: email.current.value,
@@ -31,6 +48,8 @@ function Register() {
       } catch (err) {
         console.log(err);
       }
+    } else {
+      console.log("Passwords don't match");
     }
   };
 
