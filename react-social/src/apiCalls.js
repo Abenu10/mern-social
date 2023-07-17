@@ -14,3 +14,4 @@ export const loginCall = async (userCredential, dispatch) => {
     dispatch({ type: "LOGIN_FAILURE", payload: err });
   }
 };
+// changed it to use config.API_URL
