@@ -7,6 +7,11 @@ import { format } from "timeago.js";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import config from './../../config.js';
+
+const api = axios.create({
+  baseURL: config.API_URL,
+});
 
 function Post({ post }) {
   const [like, setLike] = useState(post.likes.length);
@@ -21,7 +26,7 @@ function Post({ post }) {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`/users?userId=${post.userId}`);
+      const res = await api.get(`/users?userId=${post.userId}`);
       setUser(res.data);
     };
     fetchUser();
@@ -29,7 +34,7 @@ function Post({ post }) {
 
   const likeHandler = () => {
     try {
-      axios.put("/posts/" + post._id + "/like", { userId: currentUser._id });
+      api.put("/posts/" + post._id + "/like", { userId: currentUser._id });
     } catch (err) {}
 
     setLike(isLiked ? like - 1 : like + 1);

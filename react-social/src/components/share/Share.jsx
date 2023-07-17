@@ -11,6 +11,11 @@ import axios from "axios";
 // import useeffect from react
 import { useEffect } from "react";
 import { unstable_createMuiStrictModeTheme } from "@mui/material";
+import config from "./../../config.js";
+
+const api = axios.create({
+  baseURL: config.API_URL,
+});
 
 function Share() {
   const { user } = useContext(AuthContext);
@@ -55,7 +60,7 @@ function Share() {
     formData.append("desc", desc.current.value);
     formData.append("postImage", file);
 
-    axios
+    api
       .post(`/posts/${user._id}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",

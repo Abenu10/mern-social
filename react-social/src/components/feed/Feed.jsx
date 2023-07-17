@@ -6,6 +6,11 @@ import "./feed.css";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 // import {Posts} from "../../dummyData"
+import config from "./../../config.js";
+
+const api = axios.create({
+  baseURL: config.API_URL,
+});
 
 function Feed({ username }) {
   const [posts, setPosts] = useState([]);
@@ -14,8 +19,8 @@ function Feed({ username }) {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = username
-        ? await axios.get("/posts/profile/" + username)
-        : await axios.get("/posts/timeline/" + user._id);
+        ? await api.get("/posts/profile/" + username)
+        : await api.get("/posts/timeline/" + user._id);
       // sort the array of posts by date
       setPosts(
         res.data.sort((p1, p2) => {

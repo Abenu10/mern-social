@@ -19,6 +19,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 //   },
 // });
 
+
 function Login() {
   
   // how are we going to handle the form submission?
@@ -40,9 +41,9 @@ function Login() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <div className="loginLogo">Lamasocial</div>
+          <div className="loginLogo">HabeshaNet</div>
           <span className="loginDesc">
-            Connect with friends and the world around you on Lamasocial.
+            Connect with friends and the world around you on HabeshaNet.
           </span>
         </div>
         <div className="loginRight">

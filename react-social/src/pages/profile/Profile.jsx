@@ -6,6 +6,11 @@ import Rightbar from "../../components/rightbar/Rightbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
+import config from "./../../config.js";
+
+const api = axios.create({
+  baseURL: config.API_URL,
+});
 
 function Profile() {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -15,7 +20,7 @@ function Profile() {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`/users?username=${username}`);
+      const res = await api.get(`/users?username=${username}`);
       setUser(res.data);
     };
     fetchUser();
@@ -30,12 +35,20 @@ function Profile() {
           <div className="profileRightTop">
             <div className="profileCover">
               <img
-                src={user.coverPicture ? PF+user.coverPicture : PF + "person/noCover.png"}
+                src={
+                  user.coverPicture
+                    ? PF + user.coverPicture
+                    : PF + "person/noCover.png"
+                }
                 alt=""
                 className="profileCoverImg"
               />
               <img
-                src={user.profilePicture ? PF+user.profilePicture : PF + "person/noAvatar.png"}
+                src={
+                  user.profilePicture
+                    ? PF + user.profilePicture
+                    : PF + "person/noAvatar.png"
+                }
                 alt=""
                 className="profileUserImg"
               />
